@@ -15,8 +15,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.*
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.contentDescription
@@ -79,7 +81,7 @@ fun LoginScreen() {
                 text = "Forgot Password?",
                 color = MaterialTheme.colorScheme.primary,
                 modifier = Modifier
-                    .clickable{}
+                    .clickable {}
                     .padding(top = 8.dp)
             )
         }
@@ -87,10 +89,10 @@ fun LoginScreen() {
 }
 
 
- @Preview(showBackground = true, widthDp = 360, heightDp = 640)
- @Preview(showBackground = true, widthDp = 720, heightDp = 360)
- @Preview(showBackground = true, widthDp = 1024, heightDp = 768)
- @Preview(showBackground = true, device = Devices.PIXEL_4A)
+@Preview(showBackground = true, widthDp = 360, heightDp = 640)
+@Preview(showBackground = true, widthDp = 720, heightDp = 360)
+@Preview(showBackground = true, widthDp = 1024, heightDp = 768)
+@Preview(showBackground = true, device = Devices.PIXEL_4A)
 @Composable
 fun LoginScreenPreview() {
     LoginScreen()
